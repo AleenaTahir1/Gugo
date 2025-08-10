@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gugo — Guess the Right Logo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Toast notifications -->
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo-dot dot-red"></span>
+        <span class="logo-dot dot-blue"></span>
+        <span class="logo-dot dot-yellow"></span>
+        <span class="logo-dot dot-green"></span>
+        <h1>Gugo</h1>
+      </div>
+      <div class="meta">
+        <div class="pill" id="levelPill">Level 1 • Easy</div>
+        <div class="pill" id="scorePill">Score: 0</div>
+      </div>
+    </header>
+
+    <main class="game">
+      <section class="intro" id="intro">
+        <h2>Guess the right logo</h2>
+        <p>
+          Three levels. One point for every correct guess. The logos get trickier as we go.
+        </p>
+        <button class="btn btn-primary" id="startBtn">Start Game</button>
+      </section>
+
+      <section class="board hidden" id="board">
+        <div class="status">
+          <div class="question" id="questionText">Which is the correct logo?</div>
+          <div class="progress">
+            <div class="bar" id="progressBar"></div>
+          </div>
+        </div>
+
+        <div class="options" id="options"></div>
+
+        <div class="controls">
+          <button class="btn" id="skipBtn" title="Skip without points">Skip</button>
+          <button class="btn btn-primary" id="nextBtn" disabled>Next</button>
+        </div>
+      </section>
+
+      <!-- Level up modal -->
+      <section class="levelup hidden" id="levelup" aria-modal="true" role="dialog">
+        <div class="levelup-card">
+          <div class="levelup-title" id="levelupTitle">Level complete!</div>
+          <div class="levelup-sub" id="levelupSub">Great work. Ready for the next level?</div>
+          <button class="btn btn-primary" id="continueBtn">Continue</button>
+        </div>
+      </section>
+
+      <section class="outro hidden" id="outro">
+        <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+        <h2 class="shimmer">Great job!</h2>
+        <p id="finalSummary">You scored 0 points.</p>
+        <p id="finalMessage" class="final-message"></p>
+        <div class="outro-actions">
+          <button class="btn" id="replayBtn">Play Again</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer removed -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
