@@ -2,6 +2,8 @@
 
 A fast, browser-based logo guessing game.
 
+Built by our team — Aleena & Saqlain.
+
 ## Features
 - Three levels: Easy, Intermediate, Hard
 - Score tracking and progress bar
