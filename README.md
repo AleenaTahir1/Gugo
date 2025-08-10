@@ -4,6 +4,10 @@ A fast, browser-based logo guessing game.
 
 Built by our team — Aleena & Saqlain.
 
+## Live Demo
+
+https://aleenatahir1.github.io/Gugo/
+
 ## Features
 - Three levels: Easy, Intermediate, Hard
 - Score tracking and progress bar
